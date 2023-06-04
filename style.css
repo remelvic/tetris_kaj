@@ -1,0 +1,78 @@
+#myCanvas {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 600px) {
+    #myCanvas {
+      background-color: red;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 1200px) {
+    #myCanvas {
+      background-color: green;
+    }
+  }
+
+  @media (min-width: 1201px) {
+    #myCanvas {
+      background-color: blue;
+    }
+  }
+
+* {
+    background-color: black;
+}
+
+  #container {
+    /* position: relative;
+    width: 400px;
+    height: 400px; */
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+  }
+
+  #helloMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+    animation: rotate 5s infinite linear;
+    color: red;
+    
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateY(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateY(360deg);
+    }
+  }
+
+  #start-button {
+    padding: 15px 30px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    top: 70%;
+    position: absolute;
+  }
+
+  #start-button:hover {
+      background-color: transparent;
+      color: red;
+    }
